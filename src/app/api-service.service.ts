@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { Post } from './post';
 import { Comment } from './comment';
+import { environment } from '../environments/environment'
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -16,7 +17,7 @@ const httpOptions = {
 })
 export class ApiServiceService {
 
-  private apiUrl = 'http://localhost:8000';
+  private apiUrl = environment.apiUrl;
 
   constructor(
     private http: HttpClient
